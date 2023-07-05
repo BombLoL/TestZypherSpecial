@@ -1,0 +1,655 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ZypherSpawner = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Only = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+ZypherSpawner.Name = "ZypherSpawner"
+ZypherSpawner.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ZypherSpawner.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ZypherSpawner
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(109, 109, 109)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.237037048, 0, 0.504075825, 0)
+Frame.Size = UDim2.new(0, 264, 0, 238)
+
+UICorner.Parent = Frame
+
+Only.Name = "Only"
+Only.Parent = Frame
+Only.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Only.BackgroundTransparency = 1.000
+Only.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Only.BorderSizePixel = 0
+Only.Position = UDim2.new(0.121212125, 0, 0, 0)
+Only.Size = UDim2.new(0, 200, 0, 50)
+Only.Font = Enum.Font.SourceSansBold
+Only.Text = "Zypher (TEST)"
+Only.TextColor3 = Color3.fromRGB(255, 255, 255)
+Only.TextScaled = true
+Only.TextSize = 14.000
+Only.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.121212125, 0, 0.264705896, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "HD Admin Loader"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.121212125, 0, 0.521008432, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Load Zypher Infinite"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+-- Scripts:
+
+local function HHCU_fake_script() -- TextButton.Script1 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		function sandbox(var,func)
+			local env = getfenv(func)
+			local newenv = setmetatable({},{
+				__index = function(self,k)
+					if k=="script" then
+						return var
+					else
+						return env[k]
+					end
+				end,
+			})
+			setfenv(func,newenv)
+			return func
+		end
+		local cors = {}
+		local mas = Instance.new("Model",game:GetService("Lighting"))
+		local Folder0 = Instance.new("Folder")
+		local Script1 = Instance.new("Script")
+		local ModuleScript2 = Instance.new("ModuleScript")
+		local Script3 = Instance.new("Script")
+		local Configuration4 = Instance.new("Configuration")
+		local Folder5 = Instance.new("Folder")
+		local Folder6 = Instance.new("Folder")
+		local Folder7 = Instance.new("Folder")
+		local ModuleScript8 = Instance.new("ModuleScript")
+		local Folder9 = Instance.new("Folder")
+		local Folder10 = Instance.new("Folder")
+		local Folder11 = Instance.new("Folder")
+		local Folder12 = Instance.new("Folder")
+		local Folder13 = Instance.new("Folder")
+		local Folder14 = Instance.new("Folder")
+		local Folder15 = Instance.new("Folder")
+		local ModuleScript16 = Instance.new("ModuleScript")
+		local Folder17 = Instance.new("Folder")
+		local ModuleScript18 = Instance.new("ModuleScript")
+		local Folder19 = Instance.new("Folder")
+		local RemoteEvent20 = Instance.new("RemoteEvent")
+		local BindableEvent21 = Instance.new("BindableEvent")
+		local RemoteFunction22 = Instance.new("RemoteFunction")
+		local BindableFunction23 = Instance.new("BindableFunction")
+		local Camera24 = Instance.new("Camera")
+		local LocalScript25 = Instance.new("LocalScript")
+		local Part26 = Instance.new("Part")
+		local PointLight27 = Instance.new("PointLight")
+		local Decal28 = Instance.new("Decal")
+		local Decal29 = Instance.new("Decal")
+		Folder0.Name = "HD Admin"
+		Folder0.Parent = mas
+		Script1.Name = "About"
+		Script1.Parent = Folder0
+		table.insert(cors,sandbox(Script1,function()
+	--[[
+		
+	For information on how to setup and use HD Admin, visit:
+	
+	https://devforum.roblox.com/t/HD/216819
+	
+	--]]
+		end))
+		ModuleScript2.Name = "Settings"
+		ModuleScript2.Parent = Folder0
+		table.insert(cors,sandbox(ModuleScript2,function()
+	--[[
+	
+	--------------| ABOUT RANKS |--------------
+	
+	RANK	| DEFAULT NAME	| COMMANDS	| EXTRA DETAILS
+	-------------------------------------------------------------------------------------------------------------------
+	5		| Owner			| All		| Is automtically set. The Owner has full access to commands and features.
+	-------------------------------------------------------------------------------------------------------------------
+	4 		| HeadAdmin		| 1,2,3,4	| 
+	3 		| Admin			| 1,2,3		| 
+	2		| Mod			| 1,2		| Can only use commands on one person at a time. 
+	1 		| VIP			| 1			| Can only use commands on theirself.
+	-------------------------------------------------------------------------------------------------------------------
+	0		| NonAdmin		| 0			| The default rank. Players are limited to basic features.
+	
+	
+	
+	
+	--------------| SETUP RANKS |--------------																															 ]] return{
+	
+				-- RANK, RANK NAMES & SPECIFIC USERS
+				Ranks = {
+					{5,	"Owner",		};
+					{4,	"HeadAdmin",	{"NeverUnplay2",0},	};
+					{3,	"Admin",		{"",0},	};
+					{2,	"Mod",			{"",0},	};
+					{1,	"VIP",			{"",0},	};
+					{0,	"NonAdmin",		};
+				};
+	
+	
+	
+				-- GAMEPASSES
+				Gamepasses = {
+					[0] = "VIP";
+				};
+	
+	
+				-- ASSETS
+				Assets = {
+					[0] = "VIP";
+				};
+	
+	
+				-- GROUPS
+				Groups = {
+					[0] = {
+						[254] = "Admin";
+						[1] = "VIP";
+					};
+				};
+	
+	
+				-- FRIENDS
+				Friends = "NonAdmin";
+	
+	
+				-- VIP SERVER OWNER
+				VipServerOwner = "NonAdmin";
+	
+	
+				-- FREE ADMIN
+				FreeAdmin = "NonAdmin";
+	
+	
+	
+	
+	
+	
+	
+	
+				--------------| BANLAND |--------------
+				Banned = {"",0};
+	
+	
+	
+	
+	
+	
+	
+	
+				--------------| SYSTEM SETTINGS |--------------
+				Prefix				= ";";			-- The character you use before every command (e.g. ';jump me').
+				SplitKey 			= " ";			-- The character inbetween command arguments (e.g. setting it to '/' would change ';jump me' to ';jump/me').
+				BatchKey 			= "";			-- The character inbetween batch commands (e.g. setting it to '|' would change ';jump me ;fire me ;smoke me' to ';jump me | ;fire me | ;smoke me'
+				QualifierBatchKey 	= ",";			-- The character used to split up qualifiers (e.g. ;jump player1,player2,player3)
+	
+				Theme				= "Blue";		-- The default UI theme.
+				NoticeSoundId		= 2865227271;	-- The SoundId for notices.
+				NoticeVolume		= 0.1;			-- The Volume for notices.
+				NoticePitch			= 1;			-- The Pitch/PlaybackSpeed for notices.
+				ErrorSoundId		= 2865228021;	-- The SoundId for error notifications.
+				ErrorVolume			= 0.1;			-- The Volume for error notifications.
+				ErrorPitch			= 1;			-- The Pitch/PlaybackSpeed for error notifications.
+				AlertSoundId		= 9161622880;	-- The SoundId for alerts.
+				AlertVolume			= 0.5;			-- The Volume for alerts.
+				AlertPitch			= 1;			-- The Pitch/PlaybackSpeed for alerts.
+	
+				WelcomeBadgeId		= 0;			-- Award new players a badge, such as 'Welcome to the game!'. Set to 0 for no badge.
+	
+				CommandDebounce		= true;			-- Wait until the command effect is over to use again. Helps to limit abuse & lag. Set to 'false' to disable.
+				SaveRank			= true;			-- Saves a player's rank in the server they received it. (e.g. ;rank plrName rank). Use ';permRank plrName rank' to permanently save a rank. Set to 'false' to disable.
+				LoopCommands		= 3;			-- The minimum rank required to use LoopCommands.
+				MusicList 			= {};	-- Songs which automatically appear in a user's radio. Type '!radio' to display the radio.
+	
+				ThemeColors = {						-- The colours players can set their HD Admin UI (in the 'Settings' menu). | Format: {ThemeName, ThemeColor3Value};
+					{"Red", 	Color3.fromRGB(150, 0, 0),		};
+					{"Orange", 	Color3.fromRGB(150, 75, 0),		};
+					{"Brown", 	Color3.fromRGB(120, 80, 30),	};
+					{"Yellow", 	Color3.fromRGB(130, 120, 0),	};
+					{"Green", 	Color3.fromRGB(0, 120, 0),		};
+					{"Blue", 	Color3.fromRGB(0, 100, 150),	};
+					{"Purple", 	Color3.fromRGB(100, 0, 150),	};
+					{"Pink",	Color3.fromRGB(150, 0, 100),	};
+					{"Black", 	Color3.fromRGB(60, 60, 60),		};
+				};
+	
+				Colors = {							-- The colours for ChatColors and command arguments. | Format: {"ShortName", "FullName", Color3Value};
+					{"r", 		"Red",		 		Color3.fromRGB(255, 0, 0)		};
+					{"o", 		"Orange",	 		Color3.fromRGB(250, 100, 0)		};
+					{"y", 		"Yellow",			Color3.fromRGB(255, 255, 0)		};
+					{"g", 		"Green"	,			Color3.fromRGB(0, 255, 0)		};
+					{"dg", 		"DarkGreen"	, 		Color3.fromRGB(0, 125, 0)		};
+					{"b", 		"Blue",		 		Color3.fromRGB(0, 255, 255)		};
+					{"db", 		"DarkBlue",			Color3.fromRGB(0, 50, 255)		};
+					{"p", 		"Purple",	 		Color3.fromRGB(150, 0, 255)		};
+					{"pk",		"Pink",		 		Color3.fromRGB(255, 85, 185)	};
+					{"bk",		"Black",		 	Color3.fromRGB(0, 0, 0)			};
+					{"w",		"White",	 		Color3.fromRGB(255, 255, 255)	};
+				};
+				ChatColors = {						-- The colour a player's chat will appear depending on their rank. '["Owner"] = "Yellow";' makes the owner's chat yellow.
+					[5] 		= "Yellow";
+				};
+	
+				Cmdbar						= 1;			-- The minimum rank required to use the Cmdbar.
+				Cmdbar2						= 3;			-- The minimum rank required to use the Cmdbar2.
+				ViewBanland					= 3;			-- The minimum rank required to view the banland.
+				OnlyShowUsableCommands		= false;		-- Only display commands equal to or below the user's rank on the Commands page.
+				RankRequiredToViewPage		= {				-- || The pages on the main menu ||
+					["Commands"]		= 0;
+					["Admin"]			= 0;
+					["Settings"]		= 0;
+				};
+				RankRequiredToViewRank		= {				-- || The rank categories on the 'Ranks' subPage under Admin ||
+					["Owner"]			= 0;
+					["HeadAdmin"]		= 0;
+					["Admin"]			= 0;
+					["Mod"]				= 0;
+					["VIP"]				= 0;
+				};
+				RankRequiredToViewRankType	= {				-- || The collection of loader-rank-rewarders on the 'Ranks' subPage under Admin ||
+					["Owner"]			= 0;
+					["SpecificUsers"]	= 5;
+					["Gamepasses"] 		= 0;
+					["Assets"] 			= 0;
+					["Groups"] 			= 0;
+					["Friends"] 		= 0;
+					["FreeAdmin"] 		= 0;
+					["VipServerOwner"] 	= 0;
+				};
+				RankRequiredToViewIcon		= 0;
+	
+				WelcomeRankNotice			= true;			-- The 'You're a [rankName]' notice that appears when you join the game. Set to false to disable.
+				WelcomeDonorNotice			= true;			-- The 'You're a Donor' notice that appears when you join the game. Set to false to disable.
+				WarnIncorrectPrefix			= true;			-- Warn the user if using the wrong prefix | "Invalid prefix! Try using [correctPrefix][commandName] instead!"
+				DisableAllNotices			= false;		-- Set to true to disable all HD Admin notices.
+	
+				ScaleLimit					= 4;			-- The maximum size players with a rank lower than 'IgnoreScaleLimit' can scale theirself. For example, players will be limited to ;size me 4 (if limit is 4) - any number above is blocked.
+				IgnoreScaleLimit			= 3;			-- Any ranks equal or above this value will ignore 'ScaleLimit'
+				CommandLimits				= {				-- Enables you to set limits for commands which have a number argument. Ranks equal to or higher than 'IgnoreLimit' will not be affected by Limit.
+					["fly"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+					["fly2"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+					["noclip"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+					["noclip2"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+					["speed"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+					["jumpPower"]	= {
+						Limit 				= 10000;
+						IgnoreLimit 		= 3;
+					};
+				};
+	
+				VIPServerCommandBlacklist	= {"permRank", "permBan", "globalAnnouncement"};	-- Commands players are probihited from using in VIP Servers.
+				GearBlacklist				= {67798397};	-- The IDs of gear items to block when using the ;gear command.
+				IgnoreGearBlacklist			= 4;			-- The minimum rank required to ignore the gear blacklist.
+	
+				PlayerDataStoreVersion		= "V1.0";		-- Data about the player (i.e. permRanks, custom settings, etc). Changing the Version name will reset all PlayerData.
+				SystemDataStoreVersion		= "V1.0";		-- Data about the game (i.e. the banland, universal message system, etc). Changing the Version name will reset all SystemData.
+	
+				CoreNotices					= {				-- Modify core notices. You can find a table of all CoreNotices under [MainModule > Client > SharedModules > CoreNotices]
+					--NoticeName = NoticeDetails;
+				};
+	
+	
+	
+	
+				--------------| MODIFY COMMANDS |--------------
+				SetCommandRankByName = {
+					--["jump"] = "VIP";
+				};	
+				SetCommandRankByTag = {
+					--["abusive"] = "Admin";
+				};
+	
+	
+	
+	
+	
+	
+	
+	
+			};
+		end))
+		Script3.Name = "Loader"
+		Script3.Parent = ModuleScript2
+		table.insert(cors,sandbox(Script3,function()
+	--[[
+		This loads HD Admin into your game.
+		
+		Require the 'HD Admin MainModule' by the HD Admin group for automatic updates.
+		
+		You can view the HD Admin Main Module here:
+		https://www.roblox.com/library/3239236979/HD
+		
+	--]]
+	
+			local loaderFolder = script.Parent.Parent
+			local mainModule = require(3239236979)
+			mainModule:Initialize(loaderFolder)
+			loaderFolder:Destroy()
+		end))
+		Configuration4.Name = "CustomFeatures"
+		Configuration4.Parent = Folder0
+		Folder5.Name = "Server"
+		Folder5.Parent = Configuration4
+		Folder6.Name = "Assets"
+		Folder6.Parent = Folder5
+		Folder7.Name = "Modules"
+		Folder7.Parent = Folder5
+		ModuleScript8.Name = "Commands"
+		ModuleScript8.Parent = Folder7
+		table.insert(cors,sandbox(ModuleScript8,function()
+			-- << RETRIEVE FRAMEWORK >>
+			local main = _G.HDAdminMain
+			local settings = main.settings
+	
+	
+	
+			-- << COMMANDS >>
+			local module = {
+	
+				-----------------------------------
+				{
+					Name = "";
+					Aliases	= {};
+					Prefixes = {settings.Prefix};
+					Rank = 1;
+					RankLock = false;
+					Loopable = false;
+					Tags = {};
+					Description = "";
+					Contributors = {};
+					--
+					Args = {};
+					Function = function(speaker, args)
+	
+					end;
+					UnFunction = function(speaker, args)
+	
+					end;
+					--
+				};
+	
+	
+	
+	
+				-----------------------------------
+				{
+					Name = "";
+					Aliases	= {};
+					Prefixes = {settings.Prefix};
+					Rank = 1;
+					RankLock = false;
+					Loopable = false;
+					Tags = {};
+					Description = "";
+					Contributors = {};
+					--
+					Args = {};
+		--[[
+		ClientCommand = true;
+		FireAllClients = true;
+		BlockWhenPunished = true;
+		PreFunction = function(speaker, args)
+			
+		end;
+		Function = function(speaker, args)
+			wait(1)
+		end;
+		--]]
+					--
+				};
+	
+	
+	
+	
+				-----------------------------------
+	
+			};
+	
+	
+	
+			return module
+	
+		end))
+		Folder9.Name = "Morphs"
+		Folder9.Parent = Folder5
+		Folder10.Name = "Tools"
+		Folder10.Parent = Folder5
+		Folder11.Name = "Client"
+		Folder11.Parent = Configuration4
+		Folder12.Name = "StarterKit"
+		Folder12.Parent = Folder11
+		Folder13.Name = "Assets"
+		Folder13.Parent = Folder11
+		Folder14.Name = "Audio"
+		Folder14.Parent = Folder11
+		Folder15.Name = "Modules"
+		Folder15.Parent = Folder11
+		ModuleScript16.Name = "ClientCommands"
+		ModuleScript16.Parent = Folder15
+		table.insert(cors,sandbox(ModuleScript16,function()
+			-- << RETRIEVE FRAMEWORK >>
+			local main = _G.HDAdminMain
+	
+	
+	
+			-- << CLIENT COMMANDS >>
+			local module = {
+	
+				----------------------------------------------------------------------
+				["commandName1"] = {
+					Function = function(speaker, args)
+	
+					end;
+				};
+	
+	
+	
+	
+				----------------------------------------------------------------------
+				["commandName2"] = {
+					Function = function(speaker, args)
+	
+					end;
+				};
+	
+	
+	
+	
+				----------------------------------------------------------------------
+	
+			};
+	
+	
+	
+			-- << SETUP >>
+			for commandName, command in pairs(module) do
+				command.Name = commandName
+			end
+	
+	
+	
+			return module
+		end))
+		Folder17.Name = "SharedModules"
+		Folder17.Parent = Folder11
+		ModuleScript18.Name = "Events"
+		ModuleScript18.Parent = Folder17
+		table.insert(cors,sandbox(ModuleScript18,function()
+			-- << RETRIEVE FRAMEWORK >>
+			local main = _G.HDAdminMain
+	
+	
+	
+			-- << EVENTS >>
+			local module = {
+	
+				----------------------------------------------------------------------
+				["EventName"] = function(bindable, parent, ...)
+	
+				end;
+	
+	
+	
+	
+				----------------------------------------------------------------------
+				["EventName2"] = function(bindable, parent, ...)
+	
+				end;
+	
+	
+	
+	
+				----------------------------------------------------------------------
+	
+			};
+	
+	
+	
+			return module
+		end))
+		Folder19.Name = "Signals"
+		Folder19.Parent = Folder11
+		RemoteEvent20.Name = "ExampleRemoteEvent"
+		RemoteEvent20.Parent = Folder19
+		BindableEvent21.Name = "ExampleBindableEvent"
+		BindableEvent21.Parent = Folder19
+		RemoteFunction22.Name = "ExampleRemoteFunction"
+		RemoteFunction22.Parent = Folder19
+		BindableFunction23.Name = "ExampleBindableFunction"
+		BindableFunction23.Parent = Folder19
+		Camera24.Name = "ThumbnailCamera"
+		Camera24.Parent = Folder0
+		Camera24.CFrame = CFrame.new(-10.9000006, 2.0999999, 10.2000122, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Camera24.CameraSubject = Part26
+		Camera24.CoordinateFrame = CFrame.new(-10.9000006, 2.0999999, 10.2000122, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Camera24.Focus = CFrame.new(-10.9000006, 2.0999999, 7.20001221, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Camera24.focus = CFrame.new(-10.9000006, 2.0999999, 7.20001221, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		LocalScript25.Parent = Camera24
+		LocalScript25.Enabled = false
+		table.insert(cors,sandbox(LocalScript25,function()
+			--Feel free to delete the 'ThumbnailCamera' and 'Part'. I use this for the model's thumbnail.
+	
+	
+	--[[
+	local thumbnailCamera = workspace["HD Admin"].ThumbnailCamera
+	local part = thumbnailCamera.Part
+	local workspaceCamera = game.Workspace.Camera
+	workspaceCamera.CameraSubject = part
+	workspaceCamera.CameraType = "Fixed"
+	workspaceCamera.CoordinateFrame = part.CFrame * CFrame.new(0,0,3)
+	workspaceCamera.Focus = part.CFrame
+	thumbnailCamera.CameraSubject = workspaceCamera.CameraSubject
+	thumbnailCamera.CameraType = workspaceCamera.CameraType
+	thumbnailCamera.CoordinateFrame = workspaceCamera.CoordinateFrame
+	thumbnailCamera.Focus = workspaceCamera.Focus
+	--]]
+		end))
+		LocalScript25.Disabled = true
+		Part26.Parent = Camera24
+		Part26.CFrame = CFrame.new(-363.3927, 378.427795, 120.379333, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Part26.Position = Vector3.new(-363.3927001953125, 378.42779541015625, 120.37933349609375)
+		Part26.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+		Part26.Size = Vector3.new(4.199999809265137, 4.199999809265137, 0.20000000298023224)
+		Part26.Anchored = true
+		Part26.BottomSurface = Enum.SurfaceType.Smooth
+		Part26.BrickColor = BrickColor.new("Really black")
+		Part26.CanCollide = false
+		Part26.Material = Enum.Material.Metal
+		Part26.TopSurface = Enum.SurfaceType.Smooth
+		Part26.brickColor = BrickColor.new("Really black")
+		Part26.FormFactor = Enum.FormFactor.Custom
+		Part26.formFactor = Enum.FormFactor.Custom
+		PointLight27.Parent = Part26
+		PointLight27.Range = 10
+		PointLight27.Brightness = 3
+		Decal28.Name = "OriginalBack"
+		Decal28.Parent = Part26
+		Decal28.Texture = "http://www.roblox.com/asset/?id=2821573888"
+		Decal28.Face = Enum.NormalId.Back
+		Decal29.Name = "OriginalFront"
+		Decal29.Parent = Part26
+		Decal29.Texture = "http://www.roblox.com/asset/?id=2821573888"
+		for i,v in pairs(mas:GetChildren()) do
+			v.Parent = workspace
+			pcall(function() v:MakeJoints() end)
+		end
+		mas:Destroy()
+		for i,v in pairs(cors) do
+			spawn(function()
+				pcall(v)
+			end)
+		end
+	end)
+end
+coroutine.wrap(HHCU_fake_script)()
+local function WYCWW_fake_script() -- TextButton_2.Script 
+	local script = Instance.new('Script', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BombLoL/Zypher-Infinite/main/Zephyr"))()
+	end)
+end
+coroutine.wrap(WYCWW_fake_script)()
+local function XBHL_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	local prnt = script.Parent
+	prnt.Active = true
+	prnt.Selectable = true
+	prnt.Draggable = true
+end
+coroutine.wrap(XBHL_fake_script)()
